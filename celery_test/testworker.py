@@ -20,6 +20,7 @@ celery_app = Celery(
     broker=broker_uri
 )
 
+# When we use the signature without output annotation and `.model_dump()` function this succeeds.
 
 @celery_app.task(bind=True, pydantic=True)
 def task1(self, payload: TestModel) -> TestModel:
