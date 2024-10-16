@@ -9,7 +9,7 @@ test = TestModel(
     uuid=uuid4()
 )
 
-result = our_chain(test.model_dump())
+result = our_chain(test)
 print(result)
 
 
